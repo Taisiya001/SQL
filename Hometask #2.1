@@ -16,5 +16,5 @@ VALUES
 SELECT id, order_status,
 IF (order_status = "OPEN", "Order is in open state",
     IF (order_status = "CLOSED", "Order is closed",
-        IF (order_status = "CANCELLED", "Order is cancelled","NOT FOUND")) as FULL_ORDER_STATUS
+        IF (order_status = "CANCELLED", "Order is cancelled","NOT FOUND"))) as FULL_ORDER_STATUS
 FROM orders;
