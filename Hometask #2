@@ -18,5 +18,6 @@ WHEN count_product BETWEEN 0 AND 100 THEN "Маленький заказ"
 WHEN count_product BETWEEN 100 AND 300 THEN "Средний заказ"
 WHEN count_product > 300 THEN "Большой заказ"
 ELSE "others"
-AND as GEEDFR
+END as GEEDFR
 FROM sales;
+    
