@@ -20,3 +20,7 @@ GROUP BY gender;
 SELECT * FROM users AS U
 WHERE NOT EXISTS(SELECT * FROM messages AS M WHERE M.from_user_id = U.id)
 GROUP BY U.id;
+/*Пусть задан некоторый пользователь. Из всех друзей этого пользователя найдите человека, который больше всех написал ему сообщений*/
+SELECT from_user_id, to_user_id, COUNT(*) AS like_count FROM messages AS P
+WHERE to_user_id = 7
+GROUP BY from_user_id;
